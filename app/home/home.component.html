@@ -1,0 +1,14 @@
+<ActionBar title="DragonPulse" class="action-bar">
+</ActionBar>
+
+<GridLayout>
+    <ScrollView class="page">
+        <StackLayout class="home-panel" orientation="horizontal">
+            <ListPicker class="region-picker" [items]="listPickerRegions"
+                [(ngModel)]="selectedRegionIndex"></ListPicker>
+            <TextField class="character-name-input" autocorrect="false"
+                [(ngModel)]="charNameInput" hint="Enter character name to search..."></TextField>
+            <Image class="search-icon" src="~/images/search-icon.png" (tap)="onSearchIconTap()"></Image>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>
